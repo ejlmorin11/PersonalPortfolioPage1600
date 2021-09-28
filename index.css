@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+
+}
+
+#navbar {
+background-color: #f53d2a
+
+}
+
+.nav-list {
+    display: flex;
+    flex: space-between;
+    justify-content: flex-end;
+    list-style-type: none;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #111999;
+}
+
