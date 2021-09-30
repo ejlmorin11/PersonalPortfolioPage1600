@@ -67,8 +67,12 @@ body {
     margin: 2rem;
 }
 
-#contact {
+#contacts {
     height: 25vh;
-    background-color: #424242;
+    background-color: #ffffff;
     color: #ffffff;
+}
+
+#contacts h2 {
+    color: #111111
 }
