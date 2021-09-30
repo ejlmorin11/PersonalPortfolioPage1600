@@ -1,23 +1,74 @@
 html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 
 }
 
-#navbar {
-background-color: #f53d2a
-
+body {
+    background-color: #111111;
 }
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    background-color: #ee6d03;
+}
+
 
 .nav-list {
     display: flex;
     flex: space-between;
     justify-content: flex-end;
     list-style-type: none;
+    margin-right: 1rem;
 
 }
 
-
-a {
+.nav-list a {
+    display: block;
     text-decoration: none;
-    color: #111999;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: xx-large;
+}
+
+.nav-list a:hover {
+    background-color: #ee3503;
+}
+
+#welcome-section {
+    background-color: #3d3c3c;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.project-tile {
+    margin: 2rem;
+}
+
+#contact {
+    height: 25vh;
+    background-color: #424242;
+    color: #ffffff;
 }
