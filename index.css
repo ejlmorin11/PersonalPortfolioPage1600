@@ -1,6 +1,19 @@
 html {
     scroll-behavior: smooth;
 }
+@media (max-width: 1200px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 980px) {
+    html {
+      font-size: 58%;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -38,25 +51,42 @@ body {
 
 .nav-list a:hover {
     background-color: #ee3503;
+
+}
+
+a { 
+    color:#ee6d03;
 }
 
 #welcome-section {
+    /* gradient code 
+    background: linear-gradient(to top, #color, 20%, #color);
+    */
     background-color: #3d3c3c;
     height: 100vh;
-    color: #ffffff;
+    color: #cccccc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
+    font-family: Ephesis;
 }
 
 #projects {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
+#projects h3 {
+    color: #cccccc;
+    font-size: 3rem;
+}
 .projects-grid {
-    width: 1280px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,12 +97,50 @@ body {
     margin: 2rem;
 }
 
-#contacts {
-    height: 25vh;
-    background-color: #ffffff;
-    color: #ffffff;
+#projects figure {
+    text-align: center;
 }
 
-#contacts h2 {
-    color: #111111
+#contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align y axis */
+    align-items: center;    /* align x axis */
+    height: 50vh;
+    background-color: #3d3c3c;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+
+#contacts div {
+    display: flex;
+    justify-content: center;
+}
+
+#contacts div a {
+    padding: 2rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-shadow: .5px .5px .5px #000000;
+    transition: transform 0.1s ease-in;
+}
+
+#contacts div a:hover {
+    background-color: #444444;
+    transform: translatey(-4px);
+
+}
+#contacts h1, h4 {
+    color: #cccccc;
+    padding-bottom: 1rem;
+}
+
+footer h4{
+    text-align: center;
+    tex-family: sans-serif;
+    padding: 1.5rem;
+    font-size: medium;
+    justify-content: center;
+
 }
