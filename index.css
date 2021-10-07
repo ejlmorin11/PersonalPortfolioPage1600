@@ -18,6 +18,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 
 }
 
@@ -29,6 +30,7 @@ body {
     width: 100%;
     position: fixed;
     background-color: #ee6d03;
+    
 }
 
 
@@ -38,19 +40,20 @@ body {
     justify-content: flex-end;
     list-style-type: none;
     margin-right: 1rem;
+    font-family: Gemunu Libre;
 
 }
 
 .nav-list a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    color: #111111;;
     padding: 1.5rem;
     font-size: xx-large;
 }
 
 .nav-list a:hover {
-    background-color: #ee3503;
+    background-color: #ff5c02;
 
 }
 
@@ -59,18 +62,20 @@ a {
 }
 
 #welcome-section {
-    /* gradient code 
-    background: linear-gradient(to top, #color, 20%, #color);
-    */
+    /*background: linear-gradient(to bottom, #000000, 50%, #3d3c3c);*/
     background-color: #3d3c3c;
     height: 100vh;
-    color: #cccccc;
+    color: #111111;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: x-large;
-    font-family: Ephesis;
+    font-size: xx-large;
+    font-family: Gemunu Libre;
+}
+
+#welcome-section h3 {
+    color:#ee6d03;
 }
 
 #projects {
@@ -80,16 +85,20 @@ a {
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    
 }
 
 #projects h3 {
     color: #cccccc;
     font-size: 3rem;
+    font-family: Gemunu Libre, Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 3px #ee6d03;
 }
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 
 }
 
@@ -97,8 +106,22 @@ a {
     margin: 2rem;
 }
 
-#projects figure {
+#projects img {
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+#projects img:hover {
+        transform: scale(1.05);
+}
+
+#projects figcaption {
+    text-decoration: none;
     text-align: center;
+}
+
+#projects figcaption:hover {
+    color: #ffffff;
 }
 
 #contacts {
@@ -110,6 +133,7 @@ a {
     background-color: #3d3c3c;
     color: #ffffff;
     font-size: 1.5rem;
+    font-family: Gemunu Libre;
 }
 
 
@@ -136,11 +160,12 @@ a {
     padding-bottom: 1rem;
 }
 
+
 footer h4{
     text-align: center;
-    tex-family: sans-serif;
     padding: 1.5rem;
     font-size: medium;
     justify-content: center;
+    font-family: sans-serif;
 
 }
