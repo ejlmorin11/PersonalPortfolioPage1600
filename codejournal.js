@@ -66,6 +66,14 @@ const myCar = {
 
 myCar.numDoors = 4; //this adds the prop numDoors = 4. 4 is the value 
 
+
+
+//behavior, interactivity = JS
+//style = css
+//structure = HTML
+
+//notes 10/12
+
 const anotherObject = {
     words: ["food", "bar", "baz"],
     car: {
@@ -75,3 +83,15 @@ const anotherObject = {
     awesomeness: true
 }
 
+//Functions
+
+function myFunction() {
+    return "My greeting to you..."
+}
+
+function sumTwoThings(one, two) {
+    // watch out for date types issues here!
+    return one + two; // if numbers, will add them. If strings, will concatenate
+}
+
+// [] = array, {} = object, () = function
