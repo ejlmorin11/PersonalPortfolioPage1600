@@ -4,20 +4,21 @@ header {
 }
 
 figure {
-    background-color: chartreuse;
+    background-color: black;
+    border: 8px solid gold;
 }
 
 img {
-    border: 8px solid blueviolet;
+    
  
 }
 
 figcaption {
-    color: #000;
+    color: #fff;
     text-align: center;
     font-size: xx-large;
-}
 
+}
 
 main {
     background-color: crimson;
