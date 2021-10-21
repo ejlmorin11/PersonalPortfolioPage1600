@@ -9,6 +9,7 @@ figure {
 
 img {
     border: 8px solid blueviolet;
+ 
 }
 
 figcaption {
@@ -16,6 +17,7 @@ figcaption {
     text-align: center;
     font-size: xx-large;
 }
+
 
 main {
     background-color: crimson;
