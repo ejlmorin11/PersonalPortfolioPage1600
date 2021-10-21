@@ -2,18 +2,16 @@ import {films} from '../data/films.js'
 
 let filmlist = document.querySelector('#filmlist')
 
-let titleList = document.createElement('ol')
-
-filmlist.appendChild(titleList)
-
-let poster = document.createElement('img')
-
-poster.src = 'https://starwars-visualguide.com/assets/img/films/2.jpg'
-
-filmlist.appendChild(poster)
 
 for (let i = 0; i < films.length; i++) {
-    let titleItem = document.createElement('li')
-    titleItem.textContent = films[i].title
-    titleList.appendChild(titleItem);
+    let figure = document.createElement('figure')
+    let figImg = document.createElement('img')
+    figImg.src = `https://starwars-visualguide.com/assets/img/films/${i+1}.jpg`
+    let figCaption = document.createElement('figcaption')
+    figCaption.textContent = films[i].title
+    
+    figure.appendChild(figImg)
+    figure.appendChild(figCaption)
+    
+    filmlist.appendChild(figure)
 }

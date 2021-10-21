@@ -3,7 +3,24 @@ header {
     color: #000;
 }
 
+figure {
+    background-color: chartreuse;
+}
+
+img {
+    border: 8px solid blueviolet;
+}
+
+figcaption {
+    color: #000;
+    text-align: center;
+    font-size: xx-large;
+}
+
 main {
     background-color: crimson;
-    color: #000
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
