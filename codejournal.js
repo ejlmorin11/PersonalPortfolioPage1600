@@ -104,3 +104,43 @@ element = {
     return console.log(element) // explicit 'return' because of multiple lines
 }
 (num1, num2) => num1 + num2
+
+// basic syntax is num => 'The Num'
+
+// a higher order function is a function that accepts another funciton as a aparameter.
+// filter, map, and reduce are the most popoular, but forEach, every, find, and some are also
+HTMLFormControlsCollection
+
+const the Function = () => {
+    //multiple lines use curly braces and 'return' keyword
+    return "I am awesome";
+};
+
+// Filter method example. Filter returns an array of all elements that 'pass the test'
+const pilots = [
+    {
+        id: 2,
+        name: "Wedge Antilles",
+        faction: "Rebels"
+    },
+    {
+        id: 8,
+        name: "Ciena Ree",
+        faction: "Empire"
+    },
+    {
+        id: 40,
+        name: "Iden Versio",
+        faction: "Empire"
+    },
+    {
+        id: 66,
+        name: "Thane Kyrell",
+        faction: "Rebels"
+    }
+];
+
+const rebels = pilots.filter((pilot) => pilot.faction === "Rebels");
+const empire = pilots.filter((pilot) => {
+    return pilot.faction === "Empire";
+})
