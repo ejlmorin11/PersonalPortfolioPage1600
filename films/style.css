@@ -1,26 +1,42 @@
-header {
-    background-color: blue;
-    color: #000;
-}
 
-figure {
-    background-color: black;
+header {
+    background-color: #EDC9AF;
+    color: #111;
+    font-size: xx-large;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    padding: 2rem 2rem;
+    text-shadow: 3px 3px 3px #FFD700;
+    font-style: oblique;
 }
 
 img {
-    border: 8px solid gold;
+    max-width: 280px;
+}
+
+
+figure {
+    background-color: #FFD700;
+}
+
+img {
+    border: 18px solid #EDC9AF;
  
 }
 
+
+
 figcaption {
-    color: #fff;
+    color: #111;
     text-align: center;
-    font-size: xx-large;
+    font-size: x-large;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
 
 }
 
 main {
-    background-color: crimson;
+    background-color: #000;
     color: #000;
     display: flex;
     flex-wrap: wrap;
