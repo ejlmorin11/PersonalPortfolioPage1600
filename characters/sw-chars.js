@@ -1,5 +1,5 @@
 import { people } from "../data/people.js"
-import { getLastNumber } from "../utils/index.js"
+import { getLastNumber, removeChildren } from "../utils/index.js"
 
 const main = document.querySelector("#main")
 
@@ -38,9 +38,7 @@ const otherCharacters = people.filter(person => {
 })
 function populateDOM(characters) {
   // remove all of the previous items before populating with new ones
-  while (main.firstChild) {
-    main.removeChild(main.firstChild)
-  }
+  removeChildren(main)
 
 characters.forEach((element) => {
   const personFig = document.createElement("figure")

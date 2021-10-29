@@ -2,7 +2,7 @@
 header {
     /* background-color: #EDC9AF; */
     /* background: linear-gradient(to bottom, #ffb6c1, 50%, #EDC9AF) */
-    background-image: linear-gradient(to bottom, salmon, 15%, #EDC9AF, #71a8ba, #000);
+    background-image: linear-gradient(to bottom,#71a8ba, 15%, #EDC9AF, salmon, #000);
     color: #111;
     font-size: xx-large;
     text-align: center;
