@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Qahiri', sans-serif;
+    font-size: 900%;
+    text-align: center;
+    color: black;
+}
+
+.mainContainer {
+    display: flex;
+}
+.nav {
+    margin-left: 2em;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    background-color: black;
+    font-size: xx-large;
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    text-align: center;
+}
+
+.shipName {
+    font-size: xx-large;
+    font-family: 'Qahiri';
+    color: black;
+}
