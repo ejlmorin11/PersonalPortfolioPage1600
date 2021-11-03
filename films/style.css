@@ -62,3 +62,10 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, #EDC9AF, #000);
+    color: #010;
+}
