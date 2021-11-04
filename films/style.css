@@ -2,12 +2,11 @@
 header {
     /* background-color: #EDC9AF; */
     /* background: linear-gradient(to bottom, #ffb6c1, 50%, #EDC9AF) */
-    background-image: linear-gradient(to bottom,#71a8ba, 15%, #EDC9AF, salmon, #000);
+    background-image: linear-gradient(to bottom,#71a8ba,  #EDC9AF, salmon, #000);
     color: #111;
     font-size: xx-large;
     text-align: center;
     font-family: 'Anton', sans-serif;
-    padding: 2rem 2rem;
     text-shadow: 3px 3px 3px #FFD700;
     font-style: oblique;
     display: flex;
