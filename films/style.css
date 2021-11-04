@@ -67,4 +67,5 @@ footer {
     justify-content: center;
     background-image: linear-gradient(to top, #EDC9AF, #000);
     color: #010;
+    font-family: monospace;
 }

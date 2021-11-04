@@ -22,6 +22,11 @@ html {
 
 }
 
+img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
 body {
     background-color: #111111;
 }
@@ -56,6 +61,7 @@ body {
     background-color: #ff5c02;
 
 }
+
 
 a { 
     color:#ee6d03;
@@ -166,6 +172,6 @@ footer h4{
     padding: 1.5rem;
     font-size: medium;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: monospace;
 
 }

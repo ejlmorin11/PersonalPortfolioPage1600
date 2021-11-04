@@ -5,34 +5,85 @@
 
 header {
     display: flex;
+    align-content: center;
     justify-content: space-around;
-    background-color: palevioletred;
-    padding: 2em 0;
+    background-color: #FFD700;
+    padding: 2em 2em .5em 2em;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    color: #black;
+    font-size: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4.5%;
+    font-family: 'Warnes', cursive;  
+
 }
 
 button {
-    font-size: x-large;
-    background-color: orangered;
+    font-size: xx-large;
+    background-color: black;
     border-radius: 1.5rem;
+    font-family: 'Warnes';
+    color: white;
 }
 
 button:hover {
-    background-color: forestgreen;
-    transform: scale(1.5);
-    color: yellowgreen;
+    background-color: white;
+    transform: scale(1.1);
+    color: black;
 /* make button expand */
 }
 main {
     display: flex;
     flex-wrap: wrap;
+    background-color: black;
+    align-content: center;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #FFD700;
+    font-size: xx-large;
+    font-family: monospace;
 }
 
 figure {
-    margin: 4px;
+    margin: 10px;
+
     
 }
 
 figure img {
     width: 180px;
-    border: 18px solid #EDC9AF;
+    border: 5px solid #FFD700;
+    border-radius: 1.5rem;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+}
+
+figure img:active {
+    transform: scale(2);
+}
+
+figcaption {
+    color: white;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+    text-align: center;
+    color: black;
+    background-color: #FFD700;
+    font-family: monospace;
+    margin-top: auto;
 }

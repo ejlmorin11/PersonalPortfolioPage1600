@@ -6,10 +6,11 @@ const main = document.querySelector("#main")
 const mainHeader = document.createElement('header')
 document.body.insertBefore(mainHeader, main)
 
+
 const allButton = document.createElement('button')
 allButton.textContent = 'all Characters'
 allButton.addEventListener('click', () => populateDOM(people))
-mainHeader.appendChild(allButton)
+mainHeader.appendChild(allButton) 
 
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
