@@ -4,6 +4,7 @@ import { getLastNumber, removeChildren } from "../utils/index.js"
 const main = document.querySelector("#main")
 
 const mainHeader = document.createElement('header')
+mainHeader.id = "buttonHeader"
 document.body.insertBefore(mainHeader, main)
 
 

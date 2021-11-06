@@ -14,18 +14,20 @@ header {
 .heading {
     display: flex;
     flex-direction: column;
-    color: #black;
+    color: #000;
     font-size: 100px;
     align-items: center;
     justify-content: center;
-    margin-left: 4.5%;
+    margin-left: 3%;
     font-family: 'Warnes', cursive;  
 
+}
+#buttonHeader {
 }
 
 button {
     font-size: xx-large;
-    background-color: black;
+    background-color:#000;
     border-radius: 1.5rem;
     font-family: 'Warnes';
     color: white;
@@ -40,7 +42,7 @@ button:hover {
 main {
     display: flex;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: #111;
     align-content: center;
     justify-content: center;
 }

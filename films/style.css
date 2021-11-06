@@ -1,8 +1,6 @@
 /* to do: find cool star wars cursor, custom make star wars logos */
 header {
-    /* background-color: #EDC9AF; */
-    /* background: linear-gradient(to bottom, #ffb6c1, 50%, #EDC9AF) */
-    background-image: linear-gradient(to bottom,#71a8ba,  #EDC9AF, salmon, #000);
+    background-image: linear-gradient(to bottom,#71a8ba, #EDC9AF, salmon, #000);
     color: #111;
     font-size: xx-large;
     text-align: center;
@@ -10,17 +8,10 @@ header {
     text-shadow: 3px 3px 3px #FFD700;
     font-style: oblique;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     
-}
-
-#house {
-    max-width: 200px;
-    max-height: 200px;
-    margin-right: 100px;
-    position:absolute;bottom: 475px;
-    position:absolute;left: 50px;
 }
 
 #double_moons {
