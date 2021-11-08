@@ -1,6 +1,7 @@
 import { starships } from "../Data/starships.js"
 import { getLastNumber, removeChildren } from "../utils/index.js"
 
+
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipViewer')
@@ -45,7 +46,7 @@ function populateShipView(shipData) {
         shipImage.hidden = true
         shipName.hidden = true
         modal.classList.toggle('is-active')
-        shipMessage.textContent = `${shipData.name} is not available \uD83D\uDC94.`
+        shipMessage.textContent = `\uD83D\uDC94 ${shipData.name} is not available\uD83D\uDC94`
     })
     shipView.appendChild(shipImage)
     shipView.appendChild(shipName)

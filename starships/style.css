@@ -1,3 +1,4 @@
+/* color scheme: #2F312C, #A83212, #C5CBB0 */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -5,18 +6,50 @@
 
 header {
     font-family: 'Qahiri', sans-serif;
-    font-size: 900%;
+    font-size: 650%;
     text-align: center;
-    color: black;
+    color: #C5CBB0;
+    background-color: #A83212;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+    filter: drop-shadow(10px 10px 4px #A83212);
+}
+
+#xWing {
+    max-height: 70%;
+    max-width: 70%;
 }
 
 .mainContainer {
     display: flex;
-}
-.nav {
-    margin-left: 2em;
+    color: #A83212;
 }
 
+.nav {
+    padding: 1em 1em 1em 2em;
+    background-color:#D6DCC1;
+    opacity: 0.7;
+}
+
+.navList {
+    font-family: monospace;
+    font-style: italic;
+}
+
+li {
+    color: #A83212;
+}
+
+li:hover {
+    color: #1E201B;
+    transform:scale(1.1);
+}
+
+.shipViewer img {
+    border: 7px solid #A83212;
+}
 section {
     width: 100%;
     display: flex;
@@ -24,20 +57,25 @@ section {
     align-items: center;
     flex-direction: column;
 }
-
+main {
+    background-image: url("starFieldBackground.jpg");
+}
 .box {
-    background-color: black;
+    background-color: #1E201B;
     font-size: xx-large;
-    color: #fff;
+    color: #b94323;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    text-align: center;
 }
 
 .shipName {
     font-size: xx-large;
-    font-family: 'Qahiri';
-    color: black;
+    font-family: monospace;
+    color: #C5CBB0;
 }
 
 footer {
     font-family: monospace;
+    color: #C5CBB0;
+    background-color: #A83212;
+    text-align: center;
 }
