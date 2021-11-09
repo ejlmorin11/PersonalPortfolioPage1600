@@ -8,13 +8,13 @@ header {
     font-family: 'Qahiri', sans-serif;
     font-size: 650%;
     text-align: center;
-    color: #C5CBB0;
+    color: #B4BAA0;
     background-color: #A83212;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 5%;
-    filter: drop-shadow(4px 10px 4px #A83212);
+    
 }
 
 #xWing, #tieFighter {
@@ -44,13 +44,14 @@ li {
 }
 
 li:hover {
-    color: #1E201B;
+    color: #f88656;
     transform:scale(1.1);
 }
 
 .shipViewer img {
     border: 7px solid #A83212;
 }
+
 section {
     width: 100%;
     display: flex;
@@ -76,7 +77,7 @@ main {
 
 footer {
     font-family: monospace;
-    color: #C5CBB0;
+    color: #B4BAA0;
     background-color: #A83212;
     text-align: center;
 }

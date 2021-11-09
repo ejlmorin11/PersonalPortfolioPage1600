@@ -9,10 +9,11 @@ header {
     font-style: oblique;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 
     
 }
+
 
 #double_moons {
     max-width: 150px;
