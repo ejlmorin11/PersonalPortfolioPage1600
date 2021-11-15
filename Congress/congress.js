@@ -11,7 +11,7 @@ function simplifiedSenators() {
             party: senator.party,
             imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
             senator: senator.gender,
-            seniority: "later",
+            seniority: +senator.seniority,
             missedVotesPct: senator.missed_votes_pct,
             loyaltyPct: senator.votes_with_party_pct,
 
@@ -45,6 +45,12 @@ const republicans = filterSenators('party', 'R')
 const femaleSenators = filterSenators('gender', 'F')
 
 console.log(republicans, femaleSenators)
+
+const mostSeniorSenator = simplifiedSenators().reduce((acc, senator) => {
+    return acc.seniority > senator.seniority ? acc : senator
+})
+
+console.log(mostSeniorSenator)
 
 
 
