@@ -1,11 +1,32 @@
 import { senators } from '../Data/senators.js'
 import { representatives } from '../Data/representatives.js'
+import { removeChildren } from '../utils/index.js'
 
 const members = [...senators, ...representatives] // modern combining arrays
+
+const main = document.querySelector("#main")
+
+const mainHeader = document.createElement('header')
+mainHeader.id = "buttonHeader"
+document.body.insertBefore(mainHeader, main)
+
+
+const senButton = document.createElement('button')
+senButton.textContent = 'Senators'
+senButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers('Sen.')))
+mainHeader.appendChild(senButton) 
+
+const repButton = document.createElement('button')
+repButton.textContent = 'Representatives'
+repButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers('Rep.')))
+mainHeader.appendChild(repButton)
 
 const senatorDiv = document.querySelector('.senators')
 const seniorityHeading = document.querySelector('.seniority')
 const weaselOrderedList = document.querySelector('.weaselList')
+
+
+
 
 function simplifiedMembers(chamberFilter) {
     const filteredArray = members.filter(member => chamberFilter ? 
@@ -27,7 +48,7 @@ function simplifiedMembers(chamberFilter) {
     })
 } 
 
-populateSenatorDiv(simplifiedMembers())
+
 
 function populateSenatorDiv(simpleSenators) {
     simpleSenators.forEach(senator => {
@@ -37,7 +58,7 @@ function populateSenatorDiv(simpleSenators) {
 
         figImg.src = senator.imgURL
 
-        figCaption.textContent = senator.name
+        figCaption.textContent = senator.name + `-${senator.party}`
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
         senatorDiv.appendChild(senFigure)
