@@ -10,7 +10,6 @@ const mainHeader = document.createElement('header')
 mainHeader.id = "buttonHeader"
 document.body.insertBefore(mainHeader, main)
 
-
 const senButton = document.createElement('button')
 senButton.textContent = 'Senators'
 senButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers('Sen.')))
@@ -24,8 +23,6 @@ mainHeader.appendChild(repButton)
 const senatorDiv = document.querySelector('.senators')
 const seniorityHeading = document.querySelector('.seniority')
 const weaselOrderedList = document.querySelector('.weaselList')
-
-
 
 
 function simplifiedMembers(chamberFilter) {
@@ -51,6 +48,7 @@ function simplifiedMembers(chamberFilter) {
 
 
 function populateSenatorDiv(simpleSenators) {
+    removeChildren(senatorDiv)
     simpleSenators.forEach(senator => {
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
