@@ -73,9 +73,10 @@ function populateSenatorDiv(simpleSenators) {
 const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
     return acc.seniority > senator.seniority ? acc : senator 
   })
-  
+
+
   seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has taken our tax dollars as salary for more than ${mostSeniorMember.seniority} years!`
-  
+  seniorityHeading.id = "seniorityHeading"
   const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
     if(senator.loyaltyPct === 100) {
       acc.push(senator)
@@ -85,15 +86,14 @@ const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
   
   const biggestWeasel = simplifiedMembers().reduce((acc, senator) => 
   (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
-  
+    biggestWeasels.textContent = "hello"
   const biggestWeasels = simplifiedMembers().filter(senator => senator.missedVotesPct >= 50)
-  
-  console.log(biggestWeasels)
   
   biggestWeasels.forEach(weasel => {
     let listItem = document.createElement('li')
     listItem.textContent = weasel.name
     weaselOrderedList.appendChild(listItem)
+
   })
 
 
