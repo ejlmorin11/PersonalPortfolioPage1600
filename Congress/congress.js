@@ -75,7 +75,7 @@ const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
   })
 
 
-  seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has taken our tax dollars as salary for more than ${mostSeniorMember.seniority} years!`
+  seniorityHeading.textContent = `The laziest members of congress are...`
   seniorityHeading.id = "seniorityHeading"
   const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
     if(senator.loyaltyPct === 100) {
@@ -86,7 +86,6 @@ const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
   
   const biggestWeasel = simplifiedMembers().reduce((acc, senator) => 
   (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
-    biggestWeasels.textContent = "hello"
   const biggestWeasels = simplifiedMembers().filter(senator => senator.missedVotesPct >= 50)
   
   biggestWeasels.forEach(weasel => {

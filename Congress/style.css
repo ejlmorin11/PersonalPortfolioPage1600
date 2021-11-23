@@ -25,15 +25,25 @@ main {
 }
 
 #seniorityHeading {
-    background-color: red;
-    color: white;
+    background-color: white;
+    color:red;
     display: flex;
     justify-content: center;
+    font-family: 'Asap', sans-serif;
 }
 
 ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-image: url("americanFlagBackG.jpg");
+    background-image: cross-fade(.3);
+}
+li {
     text-align: center;
-    background-color: yellow;
+    font-family: 'Asap', sans-serif;
+    font-size: x-large;
+    color: black;
 }
 
 
@@ -53,7 +63,6 @@ figure img {
 figcaption {
     text-align: center;
     color: white;
-    font-family: 'Nanum Myeongjo', serif;
     font-family: 'Asap', sans-serif;
     font-size: small;
 }
@@ -73,27 +82,34 @@ figcaption {
 }
 
 header img {
-    filter: drop-shadow(4px -10px 4px #ffd700);
+    padding-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: blue;
+    color: white;
+    
 }
 
 button {
     font-size: xx-large;
     background-color:red;
-    border-radius: 1.5rem;
+    border-radius: none;
     font-family: 'Cinzel', serif;
     color:white;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     
 }
-
 
 button:hover {
     background-color: white;
     transform: scale(1.1);
     color: blue;
 
-button
+
 
 /* make button expand */
