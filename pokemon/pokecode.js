@@ -62,5 +62,12 @@ function populateCardBack(pokemon) {
         abilityList.appendChild(listItem)
     })
     pokeBack.appendChild(abilityList)
+    
+
+    const label2 = document.createElement('h4')
+    label2.textContent = 'Weight:'
+    pokeBack.appendChild(label2)
+    const weightNum = document.createElement('li')
     return pokeBack
+
 }
