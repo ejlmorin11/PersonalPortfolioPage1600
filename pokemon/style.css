@@ -15,6 +15,22 @@
     perspective: 600px;
 }
 
+button {
+    background-color: #FF0000;
+    color: white;
+}
+header {
+    text-align: center;
+    background: #3B4CCA;
+    color: #FFDE00;
+}
+
+header h2 {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: xx-large;
+}
+
 .card {
     width: 100%;
     height: 100%;
@@ -33,19 +49,45 @@
 }
 
 .card.is-flipped {
-    transform: rotateY(180deg);
+    transform: rotate3d(0, 1000, -90, 180deg);
 }
 
 .front {
-    background: #fd8ba0;
+    background: #999;
+    /* border: 2px solid #CC0000;
+    border-radius: 3px; */
 }
 
 .back {
-    background: #49de94;
+    background-color: #CC0000;
     transform: rotateY(180deg);
+    border: 2px solid #FFDE00;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 0 0 1em 1em;
+    flex
 }
 
 figure img {
     width: 200px;
 
+}
+
+body {
+    background-color: #999;
+}
+
+
+figcaption {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: x-large;
+    color: #CC0000;
+}
+
+.scene {
+    color: white;
+    justify-content: center;
 }

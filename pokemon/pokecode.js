@@ -24,7 +24,7 @@ const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
-  loadPokemon(100, 5)
+  loadPokemon(100, 6)
 })
 
 const moreButton = document.querySelector('.morePokemon')
@@ -168,6 +168,7 @@ function populateCardBack(pokemon) {
     const label2 = document.createElement('h4')
     label2.textContent = `Weight: ${pokemon.weight} kgs`
     pokeBack.appendChild(label2)
+
 
     const label3 = document.createElement('h4')
     label3.textContent = `Height: ${pokemon.height} inches`
