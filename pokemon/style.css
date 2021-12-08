@@ -25,6 +25,11 @@ header {
     color: #FFDE00;
 }
 
+header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 8rem;
+}
+
 header h2 {
     text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
@@ -49,7 +54,7 @@ header h2 {
 }
 
 .card.is-flipped {
-    transform: rotate3d(0, 1000, -90, 180deg);
+    transform: rotate3d(0, 1000, 90, 180deg);
 }
 
 .front {
@@ -90,4 +95,8 @@ figcaption {
 .scene {
     color: white;
     justify-content: center;
+}
+
+li, p {
+    color: #FFDE00;
 }

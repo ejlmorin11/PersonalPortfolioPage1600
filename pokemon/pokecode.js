@@ -166,14 +166,20 @@ function populateCardBack(pokemon) {
     
 
     const label2 = document.createElement('h4')
-    label2.textContent = `Weight: ${pokemon.weight} kgs`
+    label2.textContent = 'Weight:'
     pokeBack.appendChild(label2)
+    const label2Content = document.createElement('p')
+    label2Content.textContent = `${pokemon.weight} kgs`
+    pokeBack.appendChild(label2Content)
+    
 
 
     const label3 = document.createElement('h4')
-    label3.textContent = `Height: ${pokemon.height} inches`
+    label3.textContent = 'Height:'
     pokeBack.appendChild(label3)
-    
+    const label3Content = document.createElement('p')
+    label3Content.textContent =  `${pokemon.height} inches`
+    pokeBack.appendChild(label3Content)
     return pokeBack
 
 }
