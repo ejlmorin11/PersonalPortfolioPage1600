@@ -18,13 +18,13 @@
 button {
     background-color: #FF0000;
     color: white;
-    font-size: x-large;
     font-family: 'Permanent Marker', cursive;
+    font-size: large;
 }
 
 button:hover {
     transform: scale(1.2);
-    color: #DD0000
+    background-color: #BB0000;
 }
 
 #typeSelector {
