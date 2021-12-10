@@ -107,7 +107,7 @@ newButton.addEventListener('click', () => {
   let pokeHeight = prompt("What is the height in PokeInches?")
   let pokeWeight = prompt("What is the weight in Pokelograms?")
   let pokeAbilities = prompt(
-    'What are your Pokabilities? (use a comma separated list)',
+    'What are your Pokabilities? (separate abilities by commas)',
   )
   let pokeTypes = prompt(
     "What are your Poketypes? (up to 2 types separated by a space)",
