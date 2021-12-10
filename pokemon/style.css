@@ -18,6 +18,19 @@
 button {
     background-color: #FF0000;
     color: white;
+    font-size: x-large;
+    font-family: 'Permanent Marker', cursive;
+}
+
+button:hover {
+    transform: scale(1.2);
+    color: #DD0000
+}
+
+#typeSelector {
+    font-family: 'Permanent Marker', cursive;
+    background-color: #FFDE00;
+    color: #3B4CCA;
 }
 header {
     text-align: center;
@@ -64,7 +77,6 @@ header h2 {
 }
 
 .back {
-    background-color: #CC0000;
     transform: rotateY(180deg);
     border: 2px solid #FFDE00;
     display: flex;
@@ -72,7 +84,7 @@ header h2 {
     align-items: left;
     justify-content: center;
     padding: 0 0 1em 1em;
-    flex
+    color:white;
 }
 
 figure img {
@@ -98,5 +110,5 @@ figcaption {
 }
 
 li, p {
-    color: #FFDE00;
+    color: black;
 }
