@@ -20,6 +20,24 @@ function loadPokemon(offset = 0, limit = 25) {
   })
 }
 
+function getRandomPokemon() {
+  const offset = Math.floor(Math.random() * 1118) + 1 
+  const limit = 1
+  console.log(offset)
+  getAPIData(
+    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
+  ).then(async (data) => {
+    for (const pokemon of data.results) {
+      await getAPIData(pokemon.url).then((pokeData) =>
+        populatePokeCard(pokeData),
+      )
+    }
+  })
+}  
+
+const randomPokemon = document.querySelector('.randomPokemon')
+randomPokemon.addEventListener('click', getRandomPokemon)
+
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
@@ -42,6 +60,7 @@ newButton.addEventListener('click', () => {
   let pokeAbilities = prompt(
     'What are your PokeAbilities? (seperate abilites by commas)',
   )
+
   let newPokemon = new Pokemon(
     pokeName,
     pokeHeight,
@@ -50,6 +69,7 @@ newButton.addEventListener('click', () => {
   )
   populatePokeCard(newPokemon)
 })
+
 
 function getAbilitiesArray(commaString) {
   let tempArray = commaString.split(',')
@@ -63,8 +83,8 @@ function getAbilitiesArray(commaString) {
 }
 
 class Pokemon {
-  constructor(name, height, weight, abilities) {
-    ;(this.id = 100),
+  constructor(name, height, weight, abilities, HP) {
+    ;(this.id = 9999),
       (this.name = name),
       (this.height = height),
       (this.weight = weight),
@@ -94,7 +114,11 @@ function populateCardFront(pokemon) {
   const pokeFront = document.createElement('figure')
   pokeFront.className = 'cardFace front'
   const pokeImg = document.createElement('img')
+  if(pokemon.id === 9999) {
+    pokeImg.src= '../images/pokeball.png'
+  } else {
   pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+  }
 
   const pokeCaption = document.createElement('figcaption')
   pokeCaption.textContent = pokemon.name
@@ -155,31 +179,50 @@ function populateCardBack(pokemon) {
     pokeBack.className = 'cardFace back'
     const label = document.createElement('h4')
     label.textContent = 'Abilities:'
-    pokeBack.appendChild(label)
+    
     const abilityList = document.createElement('ul')
     pokemon.abilities.forEach((abilityItem) => {
       let listItem = document.createElement('li')
       listItem.textContent = abilityItem.ability.name
       abilityList.appendChild(listItem)
     })
-    pokeBack.appendChild(abilityList)
+    
     
 
     const label2 = document.createElement('h4')
     label2.textContent = 'Weight:'
-    pokeBack.appendChild(label2)
+    
     const label2Content = document.createElement('p')
     label2Content.textContent = `${pokemon.weight} kgs`
-    pokeBack.appendChild(label2Content)
     
-
+    
 
     const label3 = document.createElement('h4')
     label3.textContent = 'Height:'
-    pokeBack.appendChild(label3)
+    
     const label3Content = document.createElement('p')
     label3Content.textContent =  `${pokemon.height} inches`
+    
+    pokeBack.appendChild(label)
+    pokeBack.appendChild(abilityList)
+    pokeBack.appendChild(label2)
+    pokeBack.appendChild(label2Content)
+
+    if(pokemon.stats) {
+      const pokeHP = document.createElement('h4')
+      pokeHP.textContent = `HP:`
+      pokeBack.appendChild(pokeHP)
+      const pokeHPContent = document.createElement('p')
+      pokeHPContent.textContent = `${pokemon.stats[0].base_stat}`
+      pokeBack.appendChild(pokeHPContent)
+    }
+
+  // add HP and height and weight
+
+    pokeBack.appendChild(label3)
     pokeBack.appendChild(label3Content)
+
     return pokeBack
+    
 
 }
