@@ -122,6 +122,9 @@ li, p {
     color: black;
 }
 
+li {
+    color: black;
+}
 footer {
     margin-top: 10em;
     text-align: center;

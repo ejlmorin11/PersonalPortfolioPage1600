@@ -20,6 +20,8 @@ function loadPokemon(offset = 1, limit = 25) {
   })
 }
 
+// random pokemon code
+
 function getRandomPokemon() {
   const offset = Math.floor(Math.random() * 1118) + 1 
   const limit = 1
@@ -39,6 +41,8 @@ const randomPokemon = document.querySelector('.randomPokemon')
 randomPokemon.addEventListener('click', getRandomPokemon)
 
 
+
+
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
@@ -47,7 +51,11 @@ loadButton.addEventListener('click', () => {
   setTimeout(() => loadPokemon(51, 50), 1000)
 })
 
+// How to get all
+
 const allPokemon = await getAllSimplePokemon()
+
+
 
 async function getAllSimplePokemon() {
   const allPokemon = []
@@ -80,6 +88,7 @@ sortButton.addEventListener('click', () => {
   const allByType = getAllPokemonByType('water')
   allByType.forEach((item) => populatePokeCard(item))
 })
+
 
 const typeSelector = document.querySelector('#typeSelector')
 typeSelector.addEventListener('change', (event) => {
