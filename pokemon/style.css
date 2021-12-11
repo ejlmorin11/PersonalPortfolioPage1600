@@ -68,6 +68,8 @@ header h2 {
 
 .card.is-flipped {
     transform: rotate3d(0, 1000, 90, 180deg);
+    box-shadow:  10px 10px 5px grey;
+    
 }
 
 .front {
@@ -84,7 +86,7 @@ header h2 {
     align-items: left;
     justify-content: center;
     padding: 0 0 1em 1em;
-    color:white;
+    color: #FFDE00;
 }
 
 figure img {
@@ -102,13 +104,29 @@ figcaption {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: x-large;
     color: #CC0000;
-}
-
-.scene {
-    color: white;
+    margin-bottom: 2em;
+    display: flex;
+    margin-bottom: auto;
     justify-content: center;
 }
 
+.scene {
+    color: #BB9E00;
+    justify-content: center;
+}
+
+
+.newPokemonClass
+
 li, p {
     color: black;
+}
+
+footer {
+    margin-top: 10em;
+    text-align: center;
+    color: #3B4CCA;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    justify-content: center;
 }

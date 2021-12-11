@@ -8,7 +8,7 @@ function getAPIData(url) {
   }
 }
 
-function loadPokemon(offset = 0, limit = 25) {
+function loadPokemon(offset = 3, limit = 25) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
   ).then(async (data) => {
@@ -43,8 +43,8 @@ const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
-  loadPokemon(100, 50)
-  setTimeout(() => loadPokemon(100, 50), 3000)
+  loadPokemon(0, 50)
+  setTimeout(() => loadPokemon(11, 50), 1000)
 })
 
 const allPokemon = await getAllSimplePokemon()
@@ -98,6 +98,7 @@ const moreButton = document.querySelector('.morePokemon')
 moreButton.addEventListener('click', () => {
   let limit = prompt('How many more Pokemon should I load?')
   let offset = prompt('At which Pokemon ID should I start loading?')
+  removeChildren(pokeGrid)
   loadPokemon(offset, limit)
 })
 
@@ -119,6 +120,7 @@ newButton.addEventListener('click', () => {
     getAbilitiesArray(pokeAbilities),
     getTypesArray(pokeTypes),
   )
+  removeChildren(pokeGrid)
   populatePokeCard(newPokemon)
 })
 
@@ -178,7 +180,7 @@ function populateCardFront(pokemon) {
   pokeFront.className = 'cardFace front'
   const pokeImg = document.createElement('img')
   if (pokemon.id === 9999) {
-    pokeImg.src = '../images/uglyPokemon.png'
+    pokeImg.src = '../images/blobFishPokemon.png'
   } else {
     pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
   }
@@ -234,7 +236,7 @@ function getPokeTypeColor(pokeType) {
       color = '#C300FF'
       break
     case 'electric':
-      color = '#C8FF00'
+      color = '#B7DD00'
       break
     case 'psychic':
       color = 'pink'
