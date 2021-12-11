@@ -8,7 +8,7 @@ function getAPIData(url) {
   }
 }
 
-function loadPokemon(offset = 3, limit = 25) {
+function loadPokemon(offset = 1, limit = 25) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
   ).then(async (data) => {
@@ -44,7 +44,7 @@ const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
   loadPokemon(0, 50)
-  setTimeout(() => loadPokemon(11, 50), 1000)
+  setTimeout(() => loadPokemon(51, 50), 1000)
 })
 
 const allPokemon = await getAllSimplePokemon()
@@ -98,7 +98,6 @@ const moreButton = document.querySelector('.morePokemon')
 moreButton.addEventListener('click', () => {
   let limit = prompt('How many more Pokemon should I load?')
   let offset = prompt('At which Pokemon ID should I start loading?')
-  removeChildren(pokeGrid)
   loadPokemon(offset, limit)
 })
 
