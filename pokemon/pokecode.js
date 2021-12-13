@@ -55,8 +55,6 @@ loadButton.addEventListener('click', () => {
 
 const allPokemon = await getAllSimplePokemon()
 
-
-
 async function getAllSimplePokemon() {
   const allPokemon = []
   await getAPIData(
