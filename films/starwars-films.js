@@ -12,7 +12,7 @@ for (let i = 0; i < films.length; i++) {
 
     const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
 
-    figCaption.textContent = foundFilm.title
+    figCaption.textContent = foundFilm.title + ` (${foundFilm.release_date.slice(0,4)})`
     
     figure.appendChild(figImg)
     figure.appendChild(figCaption)
