@@ -111,6 +111,11 @@ button:hover {
     background-color: white;
     transform: scale(1.1);
     color: blue;
+    cursor: pointer;
+}
 
+#portLink {
+    color: red;
+}
 
 /* make button expand */

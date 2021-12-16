@@ -95,3 +95,7 @@ footer{
     font-family: monospace;
     margin-top: auto;
 }
+
+.portLink {
+    color: gray;
+}

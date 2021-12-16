@@ -59,6 +59,7 @@ body {
 
 .nav-list a:hover {
     background-color: #ff5c02;
+    cursor: pointer;
 
 }
 
@@ -96,7 +97,7 @@ a {
 
 #projects h3 {
     color: #cccccc;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: Gemunu Libre, Arial, Helvetica, sans-serif;
     text-shadow: 3px 3px 3px #ee6d03;
 }
@@ -119,6 +120,7 @@ a {
 
 #projects img:hover {
         transform: scale(1.05);
+        cursor: pointer;
 }
 
 #projects figcaption {
@@ -128,6 +130,7 @@ a {
 
 #projects figcaption:hover {
     color: #ffffff;
+    cursor: pointer;
 }
 
 #contacts {
@@ -159,11 +162,13 @@ a {
 #contacts div a:hover {
     background-color: #444444;
     transform: translatey(-4px);
+    cursor: pointer;
 
 }
 #contacts h1, h4 {
     color: #cccccc;
     padding-bottom: 1rem;
+    text-align: center;
 }
 
 

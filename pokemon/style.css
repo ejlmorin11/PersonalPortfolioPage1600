@@ -25,6 +25,7 @@ button {
 button:hover {
     transform: scale(1.2);
     background-image: linear-gradient(180deg, white 50%, red 50%);
+    cursor: pointer;
 }
 
 #typeSelector {
