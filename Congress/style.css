@@ -44,6 +44,7 @@ li {
     font-family: 'Asap', sans-serif;
     font-size: x-large;
     color: black;
+    font-style: italic;
 }
 
 
@@ -58,13 +59,15 @@ figure {
 figure img {
     border: solid 3px blue;
     filter: drop-shadow(4px -4px 4px black);
+    padding: .1rem;
 }
 
 figcaption {
     text-align: center;
     color: white;
     font-family: 'Asap', sans-serif;
-    font-size: x-small;
+    font-size: small;
+    
 }
 
 .heading {
@@ -108,7 +111,6 @@ button:hover {
     background-color: white;
     transform: scale(1.1);
     color: blue;
-
 
 
 /* make button expand */

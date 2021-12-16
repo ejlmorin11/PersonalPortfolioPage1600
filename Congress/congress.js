@@ -50,6 +50,7 @@ function simplifiedMembers(chamberFilter) {
             seniority: +senator.seniority,
             missedVotesPct: senator.missed_votes_pct,
             loyaltyPct: senator.votes_with_party_pct,
+            shortTitle: senator.short_title,
 
         }
     })
@@ -70,7 +71,7 @@ function simplifiedMembersParty(partyFilter) {
           seniority: +senator.seniority,
           missedVotesPct: senator.missed_votes_pct,
           loyaltyPct: senator.votes_with_party_pct,
-          // short_title: `senator.short_title`
+          shortTitle: senator.short_title,
 
       }
   })
@@ -87,7 +88,7 @@ function populateSenatorDiv(simpleSenators) {
 
         figImg.src = senator.imgURL
 
-        figCaption.textContent = senator.name + `-${senator.party}`
+        figCaption.textContent = senator.shortTitle + ` ${senator.name}` + `-${senator.party}`
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
         senatorDiv.appendChild(senFigure)
