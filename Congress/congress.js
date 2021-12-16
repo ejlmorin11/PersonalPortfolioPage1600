@@ -20,6 +20,16 @@ repButton.textContent = 'Representatives'
 repButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembers('Rep.')))
 mainHeader.appendChild(repButton)
 
+const repubButton = document.createElement('button')
+repubButton.textContent = 'Republicans'
+repubButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembersParty('R')))
+mainHeader.appendChild(repubButton)
+
+const demButton = document.createElement('button')
+demButton.textContent = 'Democrats'
+demButton.addEventListener('click', () => populateSenatorDiv(simplifiedMembersParty('D')))
+mainHeader.appendChild(demButton)
+
 const senatorDiv = document.querySelector('.senators')
 const seniorityHeading = document.querySelector('.seniority')
 const weaselOrderedList = document.querySelector('.weaselList')
@@ -43,6 +53,27 @@ function simplifiedMembers(chamberFilter) {
 
         }
     })
+} 
+
+function simplifiedMembersParty(partyFilter) {
+  const filteredArray = members.filter(member => partyFilter ? 
+  member.party === partyFilter : member)
+
+  return filteredArray.map(senator => {
+      const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+      return {
+          id: senator.id,
+          name: `${senator.first_name}${middleName}${senator.last_name}`,
+          party: senator.party,
+          imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
+          senator: senator.gender,
+          seniority: +senator.seniority,
+          missedVotesPct: senator.missed_votes_pct,
+          loyaltyPct: senator.votes_with_party_pct,
+          // short_title: `senator.short_title`
+
+      }
+  })
 } 
 
 
