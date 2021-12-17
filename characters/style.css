@@ -67,6 +67,10 @@ figure {
     
 }
 
+main {
+    min-height: 100vh;
+}
+
 figure img {
     width: 180px;
     border: 5px solid #FFD700;
@@ -97,5 +101,5 @@ footer{
 }
 
 .portLink {
-    color: gray;
+    color: #333;
 }

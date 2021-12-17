@@ -1,3 +1,8 @@
+@-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+  }
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -43,8 +48,11 @@ li {
     text-align: center;
     font-family: 'Asap', sans-serif;
     font-size: x-large;
-    color: black;
     font-style: italic;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1, 0, 1, 1);
+    -webkit-animation-duration: 2.7s;
 }
 
 
@@ -60,6 +68,10 @@ figure img {
     border: solid 3px blue;
     filter: drop-shadow(4px -4px 4px black);
     padding: .1rem;
+}
+
+.senators {
+    min-height: 100vh;
 }
 
 figcaption {
@@ -87,6 +99,7 @@ figcaption {
 header img {
     padding-top: 2rem;
 }
+
 
 footer {
     text-align: center;
